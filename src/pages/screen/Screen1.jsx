@@ -10,7 +10,7 @@ const Demo = () => {
 
     //纹理贴图加载器TextureLoader
     const texLoader = new THREE.TextureLoader();
-    const texture = texLoader.load('/public/textures/wood.jpg');
+    const texture = texLoader.load(`${import.meta.env.BASE_URL}textures/wood.jpg`);
 
     // 高光材质
     const material = new THREE.MeshPhongMaterial({
@@ -33,7 +33,7 @@ const Demo = () => {
     scene.add(cloneMesh);
 
     const sphereGeometry = new THREE.SphereGeometry(50, 30, 30);
-    const texture2 = texLoader.load('/public/textures/nature.jpg');
+    const texture2 = texLoader.load(`${import.meta.env.BASE_URL}textures/nature.jpg`);
     const cloneMaterial = material.clone();
     cloneMaterial.map = texture2;
     const sphereMesh = new THREE.Mesh(sphereGeometry, cloneMaterial);

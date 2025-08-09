@@ -90,7 +90,7 @@ const Demo = () => {
     scene.add(ambientLight);
 
     const rgbeLoader = new RGBELoader();
-    scene.environment = rgbeLoader.load('/public/textures/lakeside_sunrise_1k.hdr');
+    scene.environment = rgbeLoader.load(`${import.meta.env.BASE_URL}textures/lakeside_sunrise_1k.hdr`);
     scene.environment.mapping = THREE.EquirectangularReflectionMapping;
 
     // 添加平行光
@@ -101,7 +101,7 @@ const Demo = () => {
     // 加载GLB模型
     const loader = new GLTFLoader();
     loader.load(
-      '/models/benchi.glb', // 替换为你的GLB模型路径
+      `${import.meta.env.BASE_URL}models/benchi.glb`, // 替换为你的GLB模型路径
       gltf => {
         const model = gltf.scene;
         console.log(model);
@@ -189,7 +189,7 @@ const Demo = () => {
 
         let neishi = model.getObjectByName('内饰');
         const textureLoader = new THREE.TextureLoader();
-        textureLoader.load('/textures/leather_red_02_coll1_1k.png', texture => {
+        textureLoader.load(`${import.meta.env.BASE_URL}textures/leather_red_02_coll1_1k.png`, texture => {
           texture.wrapS = THREE.RepeatWrapping;
           texture.wrapT = THREE.RepeatWrapping;
           texture.repeat.set(400, 400); // 根据需要调整重复次数

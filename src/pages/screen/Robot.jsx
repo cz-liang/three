@@ -38,7 +38,7 @@ const Demo = () => {
     // 加载GLB模型
     const loader = new GLTFLoader();
     loader.load(
-      '/models/robot.glb', // 替换为你的GLB模型路径
+      `${import.meta.env.BASE_URL}models/robot.glb`, // 替换为你的GLB模型路径
       glb => {
         console.log(glb);
 

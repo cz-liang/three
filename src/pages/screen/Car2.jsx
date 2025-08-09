@@ -20,7 +20,7 @@ const Demo = () => {
     scene.add(ambientLight);
 
     const rgbeLoader = new RGBELoader();
-    scene.environment = rgbeLoader.load('/public/textures/lakeside_sunrise_1k.hdr');
+    scene.environment = rgbeLoader.load(`${import.meta.env.BASE_URL}textures/lakeside_sunrise_1k.hdr`);
     scene.environment.mapping = THREE.EquirectangularReflectionMapping;
 
     // 车身材质
@@ -48,7 +48,7 @@ const Demo = () => {
     const loader = new GLTFLoader();
     const space = 2;
     loader.load(
-      '/models/car.glb', // 替换为你的GLB模型路径
+      `${import.meta.env.BASE_URL}models/car.glb`, // 替换为你的GLB模型路径
       gltf => {
         const model = gltf.scene;
         console.log(model);

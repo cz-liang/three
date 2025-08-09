@@ -7,7 +7,7 @@ const Screen3 = () => {
   const { containerRef } = useThreeRenderer((scene, renderer, camera) => {
     // ✅ 加载 HDR 环境贴图
     const rgbeLoader = new RGBELoader();
-    rgbeLoader.load('/public/textures/shanghai_bund_4k.hdr', texture => {
+    rgbeLoader.load(`${import.meta.env.BASE_URL}textures/shanghai_bund_4k.hdr`, texture => {
       texture.mapping = THREE.EquirectangularReflectionMapping;
       // 创建天空盒
       const skybox = new THREE.Mesh(
