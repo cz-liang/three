@@ -1,0 +1,1 @@
+import{O as t}from"./index-BRMncmRH.js";import{u as a,h as o,j as n,k as h}from"./useThreeRenderer-B7UumByD.js";const d=()=>{const{containerRef:e}=a((r,i)=>{const s=new o(new n(1,32,32),new h({color:"#753f00"}));r.add(s)});return t.jsx("div",{ref:e,style:{width:"100%",height:"100%"}})};export{d as default};
