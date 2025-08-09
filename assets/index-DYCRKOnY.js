@@ -1,0 +1,1 @@
+import{L as e,O as o}from"./index-DkU3-HG7.js";const t=()=>{const n=e(),s=()=>{n("/")};return o.jsx("div",{className:"not-found",children:o.jsxs("div",{className:"not-found-container",children:[o.jsx("h1",{children:"404"}),o.jsx("p",{children:"Page not found ......"}),o.jsx("div",{onClick:s,className:"home-link",children:"Go back to Home"})]})})};export{t as default};
